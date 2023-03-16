@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
- * Hello
+ * main - This is the main function
+ * return: 0
  */
 int main(void)
 {
