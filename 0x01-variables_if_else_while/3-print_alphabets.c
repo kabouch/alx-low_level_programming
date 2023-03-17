@@ -10,9 +10,9 @@ int main(void)
 	while (n <= 122)
 	{
 		putchar(n);
-		n++ ;
-		putchar(n+32);
-		n++ ;
+		n++;
+		putchar(n + 32);
+		n++;
 	}
 	putchar('\n');
 	return (0);
