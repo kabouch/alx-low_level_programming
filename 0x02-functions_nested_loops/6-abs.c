@@ -9,6 +9,5 @@ int _abs(int n)
 {
 	int abslt;
 	abslt = abs(n);
-	putchar(abslt);
-	return (0);
+	return (abslt);
 }
