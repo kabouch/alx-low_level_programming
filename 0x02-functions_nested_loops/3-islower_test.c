@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 /**
  * _islower - X
  * @c: X
@@ -6,7 +7,7 @@
  */
 int _islower(int c)
 {
-	if (c >= 97 && c <= 122)
+	if (islower(c))
 	{
 		putchar(49);
 	}
