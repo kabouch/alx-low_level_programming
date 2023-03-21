@@ -6,7 +6,7 @@
  */
 int print_sign(int n)
 {
-	if (n > )
+	if (n > 0 )
 	{
 		putchar(43);
 		putchar(',');
