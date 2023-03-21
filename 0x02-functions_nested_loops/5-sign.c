@@ -18,14 +18,14 @@ int print_sign(int n)
 		putchar(48);
                 putchar(',');
                 putchar(' ');
-		return (0)
+		return (0);
 	}
 	else
 	{
 		putchar(45);
                 putchar(',');
                 putchar(' ');
-                return (-1)
+                return (-1);
 	}
 	putchar('\n');
 }
