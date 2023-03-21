@@ -5,8 +5,8 @@
  */
 int _abs(int)
 {
-	int abs;
-	abs = abs();
-	putchar(abs);
+	int abslt;
+	abslt = abs();
+	putchar(abslt);
 	return (0);
 }
