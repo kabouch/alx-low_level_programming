@@ -3,7 +3,7 @@
  * main - Function that prints _putchar
  * Return: 0
  */
-int main()
+int main(void)
 {
 	char string[] = "_putchar";
 	int i;
@@ -12,5 +12,6 @@ int main()
 	{
 		putchar(string[i]);
 	}
-	return 0;
+	putchar(\n);
+	return (0);
 }
