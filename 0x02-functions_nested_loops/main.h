@@ -3,8 +3,8 @@
  * main - main function
  * Return:0
  */
-int main(void)
+/*int main(void)
 {
-/*	print_alphabet();*/
+	print_alphabet();
 	return (0);
-}
+}*/
