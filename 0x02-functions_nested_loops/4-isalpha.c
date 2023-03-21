@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
- * _islower - X
+ * _isalpha - X
  * @c: X
- * Return:0
+ * Return: 0
  */
-int _islower(int c)
+int _isalpha(int c)
 {
-	if (islower(c))
+	if (isalpha(c))
 	{
 		return (1);
 	}
