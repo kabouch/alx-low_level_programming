@@ -9,17 +9,18 @@ int print_sign(int n)
 	if (n > 0 )
 	{
 		putchar(43);
-		return (1);
+		return putchar(49);
 	}
 	else if (n == 0)
 	{
 		putchar(48);
-		return (0);
+		return putchar(48);
 	}
 	else
 	{
 		putchar(45);
-                return (-1);
+		putchar(45);
+                return putchar(49);
 	}
 	putchar('\n');
 	return (0);
