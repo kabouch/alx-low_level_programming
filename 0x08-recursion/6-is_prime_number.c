@@ -4,6 +4,7 @@
  * check_prime - X
  * @n: n
  * @i: i
+ * Return: int
  */
 
 int check_prime(int n, int i)
@@ -12,7 +13,7 @@ int check_prime(int n, int i)
 	{
 		return (0);
 	}
-	
+
 	if (n % i == 0 && i > 1)
 	{
 		return (0);
