@@ -11,8 +11,9 @@
 
 int main(int argc, char *argv[])
 {
-	int m = atoi(argv[1]) * atoi(argv[2]);
+	int m;
 
+	m = atoi(argv[1]) * atoi(argv[2]);
 	if (argc < 3)
 	{
 		printf("Error\n");
