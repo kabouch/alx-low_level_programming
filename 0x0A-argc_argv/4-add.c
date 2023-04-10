@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main - X
@@ -12,36 +13,36 @@
 
 int main(int argc, char *argv[])
 {
-	int i = 1, m = 0;
+	int i;
+	unsigned int k, sum = 0;
+	char *e;
 
-	if (argc == 1)
+	if (argc > 1)
 	{
-		printf("%d\n", 0);
+		for (i = 1; i < argc; i++)
+		{
+			e = argv[i];
 
-		return (0);
+			for (k = 0; k < strlen(e); k++)
+			{
+				if (e[k] < 48 || e[k > 57])
+				{
+					printf("Error\n");
+
+					return (1);
+				}
+			}
+
+			sum += atoi(e);
+			e++;
+		}
+
+		printf("%d\n", sum);
 	}
 
 	else
 	{
-		while (i < argc)
-		{
-			if (isdigit(atoi(argv[i])))
-			{
-				m = m + atoi(argv[i]);
-
-				printf("%d\n", m);
-
-				return (0);
-			}
-			
-			else
-			{
-				printf("Error");
-
-				return (1);
-			}
-			i++;
-		}
+		printf("0\n");
 	}
 
 	return (0);
