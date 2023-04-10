@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -8,9 +9,9 @@
  * Return: int
  */
 
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
-	int m = argv[1] * argv[2];
+	int m = atoi(argv[1]) * atoi(argv[2]);
 	
 	if (argc < 3)
 	{
