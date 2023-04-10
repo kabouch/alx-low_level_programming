@@ -10,7 +10,8 @@
 
 int main(int argc, char *argv[])
 {
-	printf("%d\n%s", argc, argv[100]);
+	(void) argv
+	printf("%d\n", argc);
 
 	return (0);
 }
