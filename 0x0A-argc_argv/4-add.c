@@ -17,24 +17,28 @@ int main(int argc, char *argv[])
 	if (argc == 1)
 	{
 		printf("%d\n", 0);
+
+		return (0);
 	}
 
 	else
 	{
 		while (i < argc)
 		{
-			if (!isdigit(argv[i]))
+			if (isdigit(atoi(argv[i])))
 			{
-				printf("Error");
+				m = m + atoi(argv[i]);
 
-				return (1);
+				printf("%d\n", m);
+
+				return (0);
 			}
 			
 			else
 			{
-				m = m + atoi(argv[i]);
-				
-				printf("%d\n", m);
+				printf("Error");
+
+				return (1);
 			}
 			i++;
 		}
