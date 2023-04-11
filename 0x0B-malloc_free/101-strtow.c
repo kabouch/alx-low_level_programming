@@ -26,7 +26,7 @@ int word_len(char *str)
 }
 
 /**
- * count_words(char *str)
+ * count_words - X
  * @str: str
  * Return: int
  */
