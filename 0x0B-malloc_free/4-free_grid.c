@@ -2,28 +2,20 @@
 #include <stdio. h>
 #include <stdlib.h>
 /**
- * print_grid - X
+ * free_grid - X
  * @grid: grid
- * @width: width
  * @height: height
  * Return: void
  */
 
-void print_grid(int **grid, int width, int height)
+void free_grid(int **grid, int heigth)
 {
-	int w;
-	int h;
+	int i;
 
-	h = 0;
-	while (h < height)
+	for (i = 0; i < heigth; i++)
 	{
-		W = 0;
-		while (w < width)
-		{
-			printf([w]);
-			W++;
-		}
-		printf("\n");
-		h++;
+		free(grid[i]);
 	}
+
+	free(grif);
 }
