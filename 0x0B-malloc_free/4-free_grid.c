@@ -4,7 +4,7 @@
 /**
  * free_grid - X
  * @grid: grid
- * @height: height
+ * @heigth: heigth
  * Return: void
  */
 
