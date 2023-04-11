@@ -4,7 +4,7 @@
 /**
  * **alloc_grid - X
  * @width: width
- * @height: height
+ * @heigth: heigth
  * Return: int
  */
 
