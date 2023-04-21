@@ -1,98 +1,53 @@
-#include "variadic_functions.h"
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * printf_c - print a character.
- * @arg_variables: list of arguments.
+ * print_all - returns all of the specified arguments
+ * @format: specifies the necessary operations
  * Return: void
- */
-
-void printf_c(va_list arg_variables)
-{
-	printf("%c", va_arg(arg_variables, int));
-}
-
-/**
- * printf_i - print an integer.
- * @arg_variables: arguments
- * Return: void
- */
-
-void printf_i(va_list arg_variables)
-{
-	printf("%i", va_arg(arg_variables, int));
-}
-
-/**
- * printf_f - print a float.
- *
- * @arg_variables: list of arguments.
- */
-
-void printf_f(va_list arg_variables)
-{
-	printf("%f", va_arg(arg_variables, double));
-}
-
-/**
- * printf_s - print a string.
- * @arg_variables: arguments
- * Return: void
- */
-
-void printf_s(va_list arg_variables)
-{
-	char *p;
-
-	p = va_arg(arg_variables, char *);
-
-	if (p == NULL)
-	p = "(nil)";
-	printf("%s", p);
-}
-
-/**
- * print_all - Prints any type of parameters
- * @format: type of arguments passed to fuction
- * @...: variable number
- * Return: Sucess
  */
 
 void print_all(const char * const format, ...)
 {
-	int i = 0;
-	int j = 0;
-	char *sep = "";
-	va_list arg_variables;
-	/*Array of struct containing the different variable types accepted*/
-	variable_type var[] = {
-	{"c", printf_c},
-	{"i", printf_i},
-	{"f", printf_f},
-	{"s", printf_s},
-	{NULL, NULL} };
-	/*Init arg list to retrieve the add arguments after parameter format*/
-	va_start(arg_variables, format);
-	/*test if both pointer and string different than NULL*/
-	j = 0;
-	while (format && format[j])
+	int i;
+	int fl;
+	char *str;
+	va_list a_list;
+
+	va_start(a_list, format);
+	i = 0;
+	while (format != NULL && format[i] != '\0')
 	{
-		i = 0;
-		while (var[i].character)
+		switch (format[i])
 		{
-			if (*(format + j) == *(var[i].character))
-			{
-				printf("%s", sep);
-					(var[i].printf)(arg_variables);
-						sep = ", ";
-							break;
-			}
-		i++;
+			case 'c':
+				printf("%c", va_arg(a_list, int));
+				fl = 0;
+				break;
+			case 'i':
+				printf("%i", va_arg(a_list, int));
+				fl = 0;
+				break;
+			case 'f':
+				printf("%f", va_arg(a_list, double));
+				fl = 0;
+				break;
+			case 's':
+				str = va_arg(a_list, char*);
+				if (str == NULL)
+					str = "(nil)";
+				printf("%s", str);
+				fl = 0;
+				break;
+			default:
+				fl = 1;
+				break;
 		}
-		j++;
+		if (format[i + 1] != '\0' && fl == 0)
+			printf(", ");
+		i++;
 	}
 	printf("\n");
-	va_end(arg_variables);
+	va_end(a_list);
 }
