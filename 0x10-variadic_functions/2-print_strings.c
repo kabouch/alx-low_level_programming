@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 /**
- * print_strings - prints strings
- * @separator: string to be printed between strings
- * @n: constant integer
- * @...: Variable number
+ * print_strings - X
+ * @separator: separator
+ * @n: n
+ * @...: ...
  * Return: Sucess
  */
 
